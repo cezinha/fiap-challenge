@@ -1,0 +1,21 @@
+noPagamento;cnpj;nomeEmpresa;status;dataVencimento;dataPagamento;eParcelado;noParcela;qtdParcela;valorParcela;valorPagamento;aprovadoPor;agencia;conta;digito
+50002345;05.740.289/0001-07;Clarice e Yago Construções ME;Pago;2022-09-10;2022-09-10;yes;1;5;1231;6155;Admin;123;101;1
+50002346;20.639.211/0001-86;Cauê e Rosa Publicidade e Propaganda ME;Pago;2022-09-11;2022-09-11;no;1;1;1211;1211;Admin;345;2123;2
+50002347;02.428.114/0001-62;Sophia e Luna Marcenaria Ltda;Agendado;2022-10-14;2022-10-10;no;1;1;211;211;;223;1123;4
+50002348;78.989.759/0001-36;Alice e Eloá Financeira ME;Agendado;2022-10-17;2022-10-10;yes;1;3;2131;6393;;2312;454;5
+50002349;29.355.015/0001-54;Carolina e Thomas Pães e Doces ME;Cancelado;2022-09-19;2022-09-19;no;1;1;445;445;;213;1212;1
+50002350;37.963.594/0001-46;Mariana e Stefany Marcenaria Ltda;Pago;2022-09-22;2022-09-22;no;1;1;112;112;Admin;1231;121;3
+50002351;05.740.289/0001-07;Clarice e Yago Construções ME;A pagar;2022-10-10;;yes;2;5;1231;6155;;123;101;1
+50002352;05.740.289/0001-07;Clarice e Yago Construções ME;A pagar;2022-11-10;;yes;3;5;1231;6155;;123;101;1
+50002353;05.740.289/0001-07;Clarice e Yago Construções ME;A pagar;2022-12-10;;yes;4;5;1231;6155;;123;101;1
+50002354;05.740.289/0001-07;Clarice e Yago Construções ME;A pagar;2023-01-10;;yes;5;5;1231;6155;;123;101;1
+50002355;78.989.759/0001-36;Alice e Eloá Financeira ME;A pagar;2022-11-17;;yes;2;3;2131;6393;;2312;454;5
+50002356;78.989.759/0001-36;Alice e Eloá Financeira ME;A pagar;2022-12-17;;yes;3;3;2131;6393;;2312;454;5
+50002357;02.428.114/0001-62;Sophia e Luna Marcenaria Ltda;A pagar;2022-11-14;;no;1;1;323;323;;223;1123;4
+50002358;29.355.015/0001-54;Carolina e Thomas Pães e Doces ME;A pagar;2022-10-19;;no;1;1;454;454;;213;1212;1
+50002359;05.740.289/0001-07;Clarice e Yago Construções ME;A pagar;2022-10-14;;yes;1;2;2345;4690;;123;101;1
+50002360;05.740.289/0001-07;Clarice e Yago Construções ME;A pagar;2022-11-14;;yes;2;2;2345;4690;;123;101;1
+50002361;37.963.594/0001-46;Mariana e Stefany Marcenaria Ltda;A pagar;2022-11-22;;no;1;1;234;234;;1231;121;3
+50002362;20.639.211/0001-86;Cauê e Rosa Publicidade e Propaganda ME;A pagar;2022-12-11;;no;1;1;456;456;;345;2123;2
+50002363;02.428.114/0001-62;Sophia e Luna Marcenaria Ltda;A pagar;2022-12-14;;no;1;1;567;567;;223;1123;4
+50002364;37.963.594/0001-46;Mariana e Stefany Marcenaria Ltda;A pagar;2022-12-22;;no;1;1;3445;3445;;1231;121;3

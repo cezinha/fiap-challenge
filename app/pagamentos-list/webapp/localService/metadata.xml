@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="PaymentsService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="Pagamentos" EntityType="PaymentsService.Pagamentos"/>
+            </EntityContainer>
+            <EntityType Name="Pagamentos">
+                <Key>
+                    <PropertyRef Name="noPagamento"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="noPagamento" Type="Edm.String" Nullable="false"/>
+                <Property Name="cnpj" Type="Edm.String"/>
+                <Property Name="nomeEmpresa" Type="Edm.String"/>
+                <Property Name="status" Type="Edm.String"/>
+                <Property Name="dataVencimento" Type="Edm.Date"/>
+                <Property Name="dataPagamento" Type="Edm.Date"/>
+                <Property Name="eParcelado" Type="Edm.Boolean"/>
+                <Property Name="noParcela" Type="Edm.Int32"/>
+                <Property Name="qtdParcela" Type="Edm.Int32"/>
+                <Property Name="valorParcela" Type="Edm.Double"/>
+                <Property Name="valorPagamento" Type="Edm.Double"/>
+                <Property Name="aprovadoPor" Type="Edm.String"/>
+                <Property Name="agencia" Type="Edm.Int32"/>
+                <Property Name="conta" Type="Edm.Int32"/>
+                <Property Name="digito" Type="Edm.Int32"/>
+                <Property Name="itens" Type="Collection(PaymentsService.fiap_challenge_Item)" Nullable="false"/>
+            </EntityType>
+            <ComplexType Name="fiap_challenge_Item">
+                <Property Name="codigo" Type="Edm.String"/>
+                <Property Name="descricao" Type="Edm.String"/>
+                <Property Name="qtd" Type="Edm.Int32"/>
+                <Property Name="precoUnit" Type="Edm.Double"/>
+                <Property Name="precoTotal" Type="Edm.Double"/>
+                <Property Name="unidade" Type="Edm.String"/>
+            </ComplexType>
+            <!-- <Action Name="draftPrepare" IsBound="true" EntitySetPath="in"> -->
+                <!-- <Parameter Name="in" Type="PaymentsService.Pagamentos"/> -->
+                <!-- <Parameter Name="SideEffectsQualifier" Type="Edm.String"/> -->
+                <!-- <ReturnType Type="PaymentsService.Pagamentos"/> -->
+            <!-- </Action> -->
+            <!-- <Action Name="draftActivate" IsBound="true" EntitySetPath="in"> -->
+                <!-- <Parameter Name="in" Type="PaymentsService.Pagamentos"/> -->
+                <!-- <ReturnType Type="PaymentsService.Pagamentos"/> -->
+            <!-- </Action> -->
+            <!-- <Action Name="draftEdit" IsBound="true" EntitySetPath="in"> -->
+                <!-- <Parameter Name="in" Type="PaymentsService.Pagamentos"/> -->
+                <!-- <Parameter Name="PreserveChanges" Type="Edm.Boolean"/> -->
+                <!-- <ReturnType Type="PaymentsService.Pagamentos"/> -->
+            <!-- </Action> -->
+            <!-- <Annotations Target="PaymentsService.EntityContainer/Pagamentos"> -->
+                <!-- <Annotation Term="Common.DraftRoot"> -->
+                    <!-- <Record Type="Common.DraftRootType"> -->
+                        <!-- <PropertyValue Property="ActivationAction" String="PaymentsService.draftActivate"/> -->
+                        <!-- <PropertyValue Property="EditAction" String="PaymentsService.draftEdit"/> -->
+                        <!-- <PropertyValue Property="PreparationAction" String="PaymentsService.draftPrepare"/> -->
+                    <!-- </Record> -->
+                <!-- </Annotation> -->
+            <!-- </Annotations> -->
+            <Annotations Target="PaymentsService.Pagamentos/createdAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+            </Annotations>
+            <Annotations Target="PaymentsService.Pagamentos/createdBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+            </Annotations>
+            <Annotations Target="PaymentsService.Pagamentos/modifiedAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+            </Annotations>
+            <Annotations Target="PaymentsService.Pagamentos/modifiedBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
