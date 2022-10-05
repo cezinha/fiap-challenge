@@ -15,12 +15,14 @@ File or Folder | Purpose
 
 ## Next Steps
 
+- Open a new terminal
+- run `npm install`
 - [Install Node.js](https://nodejs.org/) → always use the latest LTS version.
 - Install cds: 
 ```
 $ npm i -g @sap/cds-dk
 ```
-- Open a new terminal and run `cds watch` 
+- run `cds watch` 
 - (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
 - Start adding content, for example, a [db/schema.cds](db/schema.cds).
 
